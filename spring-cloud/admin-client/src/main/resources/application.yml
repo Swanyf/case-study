@@ -1,0 +1,20 @@
+server:
+  port: 9002
+eureka:
+  client:
+    service‐url:
+      defaultZone: http://localhost:7000/eureka   # 指定注册中心
+    instance:
+      prefer‐ip‐address: true   # 模块之间可以跨域访问
+
+datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://192.168.110.132:3306/tensquare_user?characterEncoding=UTF8
+  username: root
+  password: rootswan
+  jpa:
+    database: MySQL
+    show-sql: true
+spring:
+  application:
+    name: admin-client
